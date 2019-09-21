@@ -2,7 +2,7 @@
 
 <% @dogs.each do |dog| %>
 	<div class="booyah-box col-10 offset-1">
-		<h2><%= dog.name %></h2><br />
+		<h2><%= link_to dog.name, dog_path(dog) %></h2><br />
 		<i><%= dog.breed %></i><br />
 		<i><%= dog.age %></i><br /><br />
 		<p><%= dog.description %></p><br />
