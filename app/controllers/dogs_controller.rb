@@ -10,6 +10,7 @@ class DogsController < ApplicationController
 
 	def create
 		Dog.create(dog_params)
+		redirect_to root_path
 	end
 
 	private
@@ -17,6 +18,5 @@ class DogsController < ApplicationController
 	def dog_params
 		params.require(:dog).permit(:name, :breed, :age, :description)
 	end
-
 
 end

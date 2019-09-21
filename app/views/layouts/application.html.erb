@@ -9,9 +9,19 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>     
-
-    <%= yield %>
+  <body>
+  <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+ <%= link_to 'Fabulous Dogs', root_path, class: 'navbar-brand' %>
+    <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+      <li class="nav-item">
+        <%= link_to 'New Dog', new_dog_path, class: 'nav-link' %>
+      </li>
+    </ul>
+    
+  </div>
+</nav>
+  <br class="clear" />
+  <%= yield %>
   </body>
 
 </html>
